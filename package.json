@@ -13,5 +13,8 @@
 		"worker-loader": "0.2.x",
 		"json5-loader": "0.1.x",
 		"json-loader": "0.2.x"
+	},
+	"scripts": {
+		"test": "node test/run-tests"
 	}
 }

@@ -1,6 +1,7 @@
+var path = require("path");
+
 // Client side tests
 
-var path = require("path");
 var Server = require("webpack-dev-server");
 
 new Server(path.join(__dirname, "lib", "main.js"), {

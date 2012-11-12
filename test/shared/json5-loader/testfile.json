@@ -1,0 +1,14 @@
+{
+	"foo": "bar",
+	"while": true,
+	"this": "is a multi-line string",
+	"here": "is another",
+	"hex": 3735928559,
+	"half": 0.5,
+	"finally": "a trailing comma",
+	"oh": [
+		"we shouldn't forget",
+		"arrays can have",
+		"trailing commas too"
+	]
+}

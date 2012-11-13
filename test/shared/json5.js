@@ -1,4 +1,4 @@
-var should = require("chai").should();
+var should = require("chai/lib/chai").should();
 
 describe("json5-loader", function() {
 	it("should load a test file", function() {

@@ -1,4 +1,4 @@
-var should = require("chai").should();
+var should = require("chai/lib/chai").should();
 
 describe("exports-loader", function() {
 	it("should export a var", function() {

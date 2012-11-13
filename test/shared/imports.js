@@ -1,4 +1,4 @@
-var should = require("chai").should();
+var should = require("chai/lib/chai").should();
 
 describe("imports-loader", function() {
 	it("should import a module", function() {

@@ -20,4 +20,12 @@ node bin/enhanced-require-hot-watch "mocha!./test/server-tests"
 node bin/webpack-dev-server "mocha!./test/client-tests"
 ```
 
-and navigate your browser to [http://localhost:8082/](http://localhost:8082/).
+and navigate your browser to [http://localhost:8080/](http://localhost:8080/).
+
+## Cover browser run
+
+``` text
+node bin/webpack-dev-server "mocha!./test/cover-client-tests" --options test/coverWebpackOptions.js
+```
+
+and navigate your browser to [http://localhost:8080/](http://localhost:8080/).

@@ -17,7 +17,7 @@ node bin/enhanced-require-hot-watch "mocha!./test/server-tests"
 ## Do tests in browser
 
 ``` text
-node bin/webpack-dev-server "mocha!./test/client-tests"
+node bin/webpack-dev-server
 ```
 
 and navigate your browser to [http://localhost:8080/](http://localhost:8080/).
@@ -25,7 +25,7 @@ and navigate your browser to [http://localhost:8080/](http://localhost:8080/).
 ## Cover browser run
 
 ``` text
-node bin/webpack-dev-server "mocha!./test/cover-client-tests" --config cover-webpack.config.js
+node bin/webpack-dev-server --config cover-webpack.config.js
 ```
 
 and navigate your browser to [http://localhost:8080/](http://localhost:8080/).

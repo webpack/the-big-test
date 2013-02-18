@@ -12,29 +12,10 @@ module.exports = function(grunt) {
 		webpack: {
 			test: {
 				entry: "mocha!./test/client-tests",
-				output: {
-					path: "assets"
-				},
-				module: {
-					loaders: [
-						{ test: /\.json$/, loader: "json" },
-						{ test: /\.css$/, loader: "style!css" }
-					]
-				},
-				plugins: [
-					inlineWorkerPlugin
-				]
 			},
 			"cover-test": {
 				entry: "mocha!./test/cover-client-tests",
-				output: {
-					path: "assets"
-				},
 				module: {
-					loaders: [
-						{ test: /\.json$/, loader: "json" },
-						{ test: /\.css$/, loader: "style!css" }
-					],
 					postLoaders: [{
 						test: /./, // any
 						exclude: [
@@ -45,6 +26,17 @@ module.exports = function(grunt) {
 						],
 						loader: "coverjs-loader"
 					}]
+				}
+			},
+			options: {
+				output: {
+					path: "assets"
+				},
+				module: {
+					loaders: [
+						{ test: /\.json$/, loader: "<%= 'json' %>" },
+						{ test: /\.css$/, loader: "style!css" }
+					],
 				},
 				plugins: [
 					inlineWorkerPlugin

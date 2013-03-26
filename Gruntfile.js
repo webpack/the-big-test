@@ -35,7 +35,8 @@ module.exports = function(grunt) {
 				module: {
 					loaders: [
 						{ test: /\.json$/, loader: "<%= 'json' %>" },
-						{ test: /\.css$/, loader: "style!css" }
+						{ test: /\.css$/, loader: "style!css" },
+						{ test: /\.coffee$/, loader: "coffee-loader" }
 					],
 				},
 				plugins: [

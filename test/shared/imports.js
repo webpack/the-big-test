@@ -7,6 +7,12 @@ describe("imports-loader", function() {
 		importModule.should.be.eql({ module: true });
 	});
 
+	it("should import a coffee-script module", function() {
+		var importModule = require("imports?moduleA!./imports-loader/import-test-file.coffee");
+		should.exist(importModule);
+		importModule.should.be.eql({ module: true });
+	});
+
 	it("should import a module with text", function() {
 		var importModule = require("imports?moduleA=moduleB!./imports-loader/import-test-file");
 		should.exist(importModule);

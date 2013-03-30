@@ -23,6 +23,7 @@
 		"bundle-loader": "0.5.x",
 		"imports-loader": "0.6.x",
 		"exports-loader": "0.6.x",
+		"expose-loader": "0.5.x",
 		"worker-loader": "0.5.x",
 		"json5-loader": "0.5.x",
 		"json-loader": "0.5.x"

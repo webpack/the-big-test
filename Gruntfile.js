@@ -1,3 +1,5 @@
+var BannerPlugin = require("webpack/lib/BannerPlugin");
+
 function inlineWorkerPlugin() {
 	this.plugin("normal-module-factory", function(nmf) {
 		nmf.plugin("before-resolve", function(data, callback) {
@@ -12,9 +14,22 @@ module.exports = function(grunt) {
 		webpack: {
 			test: {
 				entry: "mocha!./test/client-tests",
+				module: {
+					loaders: [
+						{ test: /\.json$/, loader: "<%= 'json' %>" },
+					]
+				},
+				plugins: [
+					new BannerPlugin("Used for the-big-test\nCreated by @sokra")
+				]
 			},
 			"cover-test": {
 				entry: "mocha!./test/cover-client-tests",
+				module: {
+					loaders: [
+						{ test: /\.json$/, loader: "json" },
+					]
+				},
 				module: {
 					postLoaders: [{
 						test: /./, // any
@@ -34,7 +49,6 @@ module.exports = function(grunt) {
 				},
 				module: {
 					loaders: [
-						{ test: /\.json$/, loader: "<%= 'json' %>" },
 						{ test: /\.css$/, loader: "style!css" },
 						{ test: /\.coffee$/, loader: "coffee-loader" }
 					],

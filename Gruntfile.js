@@ -1,14 +1,5 @@
 var BannerPlugin = require("webpack/lib/BannerPlugin");
 
-function inlineWorkerPlugin() {
-	this.plugin("normal-module-factory", function(nmf) {
-		nmf.plugin("before-resolve", function(data, callback) {
-			data.request = data.request.replace(/worker!/, "worker?inline!");
-			callback(null, data);
-		});
-	});
-}
-
 module.exports = function(grunt) {
 	grunt.initConfig({
 		webpack: {
@@ -45,7 +36,8 @@ module.exports = function(grunt) {
 			},
 			options: {
 				output: {
-					path: "assets"
+					path: "assets",
+					publicPath: "assets/"
 				},
 				module: {
 					loaders: [
@@ -54,7 +46,6 @@ module.exports = function(grunt) {
 					],
 				},
 				plugins: [
-					inlineWorkerPlugin
 				]
 			}
 		}

@@ -11,10 +11,10 @@
 	],
 	"homepage": "http://github.com/webpack/the-big-test",
 	"dependencies": {
-		"webpack": "0.10.x",
-		"webpack-dev-server": "0.10.x",
+		"webpack": "1.x",
+		"webpack-dev-server": "1.2.x",
 		"grunt": "~0.4.0",
-		"grunt-webpack": "0.10.x",
+		"grunt-webpack": "1.x",
 		"chai": "1.4.x",
 		"enhanced-require": "0.5.x",
 		"mocha-loader": "0.5.x",

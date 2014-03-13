@@ -2,7 +2,8 @@ var BannerPlugin = require("webpack/lib/BannerPlugin");
 module.exports = {
 	entry: "mocha!./test/client-tests",
 	output: {
-		path: __dirname
+		path: "assets",
+		publicPath: "/assets/"
 	},
 	module: {
 		loaders: [

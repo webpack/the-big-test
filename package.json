@@ -26,7 +26,9 @@
 		"expose-loader": "0.5.x",
 		"worker-loader": "0.5.x",
 		"json5-loader": "0.5.x",
-		"json-loader": "0.5.x"
+		"json-loader": "0.5.x",
+		"style-loader": "0.6.x",
+		"css-loader": "0.6.x"
 	},
 	"scripts": {
 		"test": "node bin/enhanced-require mocha!./test/server-tests"

@@ -1,5 +1,9 @@
 module.exports = {
 	entry: "mocha!./test/cover-client-tests",
+	output: {
+		path: "assets",
+		publicPath: "/assets/"
+	},
 	module: {
 		loaders: [
 			{ test: /\.json$/, loader: "json" },

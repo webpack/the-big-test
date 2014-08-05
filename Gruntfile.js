@@ -19,9 +19,7 @@ module.exports = function(grunt) {
 				module: {
 					loaders: [
 						{ test: /\.json$/, loader: "json" },
-					]
-				},
-				module: {
+					],
 					postLoaders: [{
 						test: /./, // any
 						exclude: [
